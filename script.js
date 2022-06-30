@@ -41,7 +41,7 @@ navigator.geolocation.getCurrentPosition(
         h3.textContent = weather.description
         img.src = icon
         img.className = 'w-28 h-28'
-        p.textContent = mainTemp.temp +' C°'
+        p.textContent = mainTemp.temp +' °C'
         h3.className = "text-3xl font-bold capitalize";
         p.className = 'text-2xl font-bold'
         main.appendChild(img)
@@ -52,10 +52,10 @@ navigator.geolocation.getCurrentPosition(
         main.innerHTML += `<p class="text-4xl capital"> ${res.name}, ${res.sys.country} </p>`
 
         // Max Temp
-        extraInfo.innerHTML = `<button class="bg-white text-blue-400	border border-blue-400 pointer-events-none py-4 rounded-lg px-5">MAX: ${mainTemp.temp_max} C°</button>`
+        extraInfo.innerHTML = `<button class="bg-white text-blue-400	border border-blue-400 pointer-events-none py-4 rounded-lg px-5">MAX: ${mainTemp.temp_max} °C</button>`
 
         // Min Temp
-        extraInfo.innerHTML += `<button class="bg-white text-blue-400	border border-blue-400 pointer-events-none py-4 rounded-lg px-5">MIN: ${mainTemp.temp_min} C° </button>`
+        extraInfo.innerHTML += `<button class="bg-white text-blue-400	border border-blue-400 pointer-events-none py-4 rounded-lg px-5">MIN: ${mainTemp.temp_min} °C </button>`
 
         // Humidity
         extraInfo.innerHTML += `<button class="bg-white text-blue-400	border border-blue-400 pointer-events-none py-4 rounded-lg px-5">HUMIDITY: ${mainTemp.humidity} %</button>`
